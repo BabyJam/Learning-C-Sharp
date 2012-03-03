@@ -13,6 +13,7 @@ namespace DayAtTheRaces
         public PictureBox MyPictureBox = null; // My PictureBox object
         public int Location = 0; // My Location on the racetrack
         public Random Randomizer; // An instance of Random
+        public string identifier;
         
         public bool Run()
         {
@@ -21,7 +22,7 @@ namespace DayAtTheRaces
 
         public void TakeStartingPosition()
         {
-            
+            StartingPosition = 36;
         }
     }
 }
