@@ -1,0 +1,16 @@
+A day at the races.
+
+This lab gives you a spec that describes a program
+for you to build, using the knowledge you’ve gained
+over the last few chapters.
+This project is bigger than the ones you’ve seen so far.
+So read the whole thing before you get started, and
+give yourself a little time. And don’t worry if you get
+stuck—there’s nothing new in here, so you can move
+on in the book and come back to the lab later.
+We’ve filled in a few design details for you, and we’ve
+made sure you’ve got all the pieces you need…and
+nothing else.
+It’s up to you to finish the job. You can download
+an executable for this lab from the website…but we
+won’t give you the code for the answer.
