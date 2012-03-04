@@ -19,10 +19,42 @@ namespace DayAtTheRaces
 
         private void btnRace_Click(object sender, EventArgs e)
         {
-            List<int> position = gameLoop();
+            List<int> position;
+            int multiply = 0;
+            if (txtBet.Text != "")
+            {
+                position = gameLoop();
 
-            MessageBox.Show(string.Format("1st place: {0}{3}2nd Place: {1}{3}3rd Place: {2}", position[0].ToString(), position[1].ToString(), 
-                position[2].ToString(), Environment.NewLine));
+                MessageBox.Show(string.Format("1st place: {0}{3}2nd Place: {1}{3}3rd Place: {2}", position[0].ToString(), position[1].ToString(),
+                    position[2].ToString(), Environment.NewLine));
+                
+                if (txtDogBetOn.Text == position[0].ToString())
+                {
+                    switch (int.Parse(position[0].ToString()))
+                    {
+                        case 0:
+                            multiply = 5;
+                            break;
+                        case 1:
+                            multiply = 2;
+                            break;
+                        case 2:
+                            multiply = 3;
+                            break;
+                        case 3:
+                            multiply = 4;
+                            break;
+                        default:
+                            MessageBox.Show("There has been an error, please re run the race");
+                            break;
+                    }
+                    lblResult.Text = "You won and have got " + int.Parse(txtBet.Text) * multiply;
+                }
+            }
+            else
+            {
+                lblResult.Text = "Please insert a value to bet";
+            }            
         }
 
         int random()
@@ -82,6 +114,17 @@ namespace DayAtTheRaces
             }
 
             return position;
+        }
+
+        private void txtBet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string allowedChars = "0123456789";
+
+            if(allowedChars.IndexOf(e.KeyChar) == -1)
+            {
+                e.Handled = true;
+            }
+
         }
     }    
 }
