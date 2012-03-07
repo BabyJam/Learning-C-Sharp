@@ -35,14 +35,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDogBetOn = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.txtBet = new System.Windows.Forms.TextBox();
             this.btnRace = new System.Windows.Forms.Button();
-            this.txtDogBetOn = new System.Windows.Forms.TextBox();
             this.lblDog1 = new System.Windows.Forms.Label();
             this.lblDog2 = new System.Windows.Forms.Label();
             this.lblDog3 = new System.Windows.Forms.Label();
             this.lblDog4 = new System.Windows.Forms.Label();
+            this.lblTest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,6 +104,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTest);
             this.groupBox1.Controls.Add(this.txtDogBetOn);
             this.groupBox1.Controls.Add(this.lblResult);
             this.groupBox1.Controls.Add(this.txtBet);
@@ -114,17 +116,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // txtDogBetOn
+            // 
+            this.txtDogBetOn.Location = new System.Drawing.Point(128, 72);
+            this.txtDogBetOn.Name = "txtDogBetOn";
+            this.txtDogBetOn.Size = new System.Drawing.Size(115, 20);
+            this.txtDogBetOn.TabIndex = 9;
+            // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(309, 54);
+            this.lblResult.Location = new System.Drawing.Point(309, 79);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 13);
             this.lblResult.TabIndex = 8;
             // 
             // txtBet
             // 
-            this.txtBet.Location = new System.Drawing.Point(7, 47);
+            this.txtBet.Location = new System.Drawing.Point(7, 72);
             this.txtBet.Name = "txtBet";
             this.txtBet.Size = new System.Drawing.Size(115, 20);
             this.txtBet.TabIndex = 7;
@@ -139,13 +148,6 @@
             this.btnRace.Text = "Race";
             this.btnRace.UseVisualStyleBackColor = true;
             this.btnRace.Click += new System.EventHandler(this.btnRace_Click);
-            // 
-            // txtDogBetOn
-            // 
-            this.txtDogBetOn.Location = new System.Drawing.Point(128, 47);
-            this.txtDogBetOn.Name = "txtDogBetOn";
-            this.txtDogBetOn.Size = new System.Drawing.Size(115, 20);
-            this.txtDogBetOn.TabIndex = 9;
             // 
             // lblDog1
             // 
@@ -183,6 +185,14 @@
             this.lblDog4.TabIndex = 10;
             this.lblDog4.Text = "4:1";
             // 
+            // lblTest
+            // 
+            this.lblTest.AutoSize = true;
+            this.lblTest.Location = new System.Drawing.Point(7, 33);
+            this.lblTest.Name = "lblTest";
+            this.lblTest.Size = new System.Drawing.Size(0, 13);
+            this.lblTest.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +210,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -228,6 +239,7 @@
         private System.Windows.Forms.Label lblDog2;
         private System.Windows.Forms.Label lblDog3;
         private System.Windows.Forms.Label lblDog4;
+        private System.Windows.Forms.Label lblTest;
     }
 }
 
